@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gym Template">
+    <meta name="keywords" content="Gym, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GymLy | Giới thiệu</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    
+    <style>
+        .star-rating {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            font-size: 2.5em;
+            margin-bottom: 25px; 
+        }
+        .star-rating input {
+            display: none;
+        }
+        .star-rating label {
+            color: #555; 
+            cursor: pointer;
+            padding: 0 0.1em;
+            transition: color 0.2s;
+            margin-bottom: 0;
+        }
+        .star-rating input:checked ~ label,
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: #f7b02a; 
+        }
+        .search-highlight {
+            background-color: #f7b02a;
+            color: #000;
+            font-weight: bold;
+            padding: 2px 5px;
+            border-radius: 3px;
+            box-shadow: 0 0 10px #f7b02a;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+ <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="canvas-search search-switch">
+            <i class="fa fa-search"></i>
+        </div>
+        <nav class="canvas-menu mobile-menu">
+            <ul>
+                <li><a href="./index.html">Trang chủ</a></li>
+                <li><a href="./about-us.html">Giới thiệu</a></li>
+                <li><a href="./services.html">Gói tập</a></li>
+                <li><a href="bmi-calculator.html">Tính BMI</a></li>
+                <li><a href="./team.html">Đội ngũ HLV</a></li>
+                <li id="auth-menu-item">
+  <a href="/account.html" id="auth-link">
+    <span id="auth-text">Đăng nhập</span>
+  </a>
+</li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="canvas-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo">
+                        <a href="./index.html">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="nav-menu">
+                        <ul>
+  <li><a href="index.html">Trang chủ</a></li>
+  <li class="active"><a href="about-us.html">Giới thiệu</a></li>  
+  <li><a href="services.html">Gói tập</a></li>
+  <li><a href="bmi-calculator.html">Tính BMI</a></li>
+  <li><a href="team.html">Đội ngũ HLV</a></li>
+  <li id="auth-menu-item">
+  <a href="account.html" id="auth-link">
+    <span id="auth-text">Đăng nhập</span>
+  </a>
+</li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="top-option">
+                        <div class="to-search search-switch">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <div class="to-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-text">
+                        <h2>Giới thiệu</h2>
+                        <div class="bt-option">
+                            <a href="./index.html">Trang chủ</a>
+                            <span>Giới thiệu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="choseus-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Vì sao chọn chúng tôi?</span>
+                        <h2>Bứt phá – Vượt giới hạn – Chạm đỉnh cao</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-034-stationary-bike"></span>
+                        <h4>Thiết bị hiện đại</h4>
+                        <p>Trang bị máy móc tiên tiến, đạt tiêu chuẩn quốc tế, hỗ trợ tập luyện hiệu quả và an toàn, mang lại trải nghiệm tập luyện đẳng cấp.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-033-juice"></span>
+                        <h4>Kế hoạch dinh dưỡng <br> lành mạnh</h4>
+                        <p>Xây dựng chế độ ăn khoa học, cân bằng và phù hợp với mục tiêu tập luyện của bạn.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-002-dumbell"></span>
+                        <h4>Chương trình huấn luyện chuyên nghiệp</h4>
+                        <p>Được thiết kế bởi huấn luyện viên giàu kinh nghiệm, giúp bạn đạt mục tiêu nhanh và an toàn.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-014-heart-beat"></span>
+                        <h4>Cá nhân hóa theo <br> nhu cầu của bạn</h4>
+                        <p>Mỗi kế hoạch tập luyện được thiết kế riêng, phù hợp với thể trạng và mục tiêu cá nhân.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="aboutus-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 p-0">
+                    <div class="about-video set-bg" data-setbg="img/about-us.jpg">
+                        <a href="https://www.youtube.com/watch?v=EzKkl64rRbM" class="play-btn video-popup"><i
+                                class="fa fa-caret-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="about-text">
+                        <div class="section-title">
+                            <span>Giới thiệu</span>
+                            <h2>Tất cả về chúng tôi</h2>
+                        </div>
+                        <div class="at-desc">
+                            <p>GymLy được thành lập với sứ mệnh mang đến một môi trường tập luyện chuyên nghiệp và hiện đại cho cộng đồng. Từ những ngày đầu, chúng tôi đã chú trọng xây dựng cơ sở vật chất tiên tiến, chương trình huấn luyện khoa học và đội ngũ HLV giàu kinh nghiệm, nhằm tạo điều kiện tốt nhất để mọi học viên có thể bắt đầu hành trình cải thiện sức khỏe và vóc dáng của mình.</p>
+                            <p>Với GymLy, chúng tôi không chỉ là một phòng tập, mà còn là thương hiệu đồng hành cùng phong cách sống khỏe mạnh và năng động. Mục tiêu tồn tại của chúng tôi là truyền cảm hứng, nâng cao sức khỏe cộng đồng và giúp mỗi cá nhân tự tin hơn với cơ thể mình. Mỗi chương trình, mỗi lớp học và mỗi dịch vụ đều hướng đến việc tối ưu trải nghiệm, đảm bảo hiệu quả và tạo động lực bền vững cho học viên.</p>
+                            <p>Trải qua hành trình phát triển và đồng hành cùng hàng trăm học viên, chúng tôi đã góp phần giúp nhiều người thay đổi vóc dáng, cải thiện sức khỏe và tìm lại sự tự tin.
+Mỗi kết quả không chỉ là con số, mà là minh chứng cho nỗ lực không ngừng của đội ngũ huấn luyện viên và tinh thần kiên trì của từng học viên.
+Với hệ thống trang thiết bị hiện đại, chương trình huấn luyện khoa học và môi trường tập luyện tích cực, chúng tôi tự hào khi mang đến những giá trị thật – sức khỏe, hình thể và động lực sống cho mỗi thành viên.</p>
+                        </div>
+                        <div class="about-bar">
+                            <div class="ab-item">
+                                <p>Thể hình</p>
+                                <div id="bar1" class="barfiller">
+                                    <span class="fill" data-percentage="80"></span>
+                                    <div class="tipWrap">
+                                        <span class="tip"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab-item">
+                                <p>Huấn luyện</p>
+                                <div id="bar2" class="barfiller">
+                                    <span class="fill" data-percentage="85"></span>
+                                    <div class="tipWrap">
+                                        <span class="tip"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab-item">
+                                <p>Thể chất</p>
+                                <div id="bar3" class="barfiller">
+                                    <span class="fill" data-percentage="75"></span>
+                                    <div class="tipWrap">
+                                        <span class="tip"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="team-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="team-title">
+                        <div class="section-title">
+                            <span>Đội ngũ HLV</span>
+                            <h2>Tập luyện cùng chuyên gia</h2>
+                        </div>
+                        <a href="./services.html" class="primary-btn btn-normal appoinment-btn">Đăng Ký</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="ts-slider owl-carousel">
+                    <div class="col-lg-4">
+                        <div class="ts-item set-bg" data-setbg="img/team/team-1.jpg">
+                            <div class="ts_text">
+                                <h4>Ngô Thị Hoa</h4>
+                                <span>HLV</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ts-item set-bg" data-setbg="img/team/team-2.jpg">
+                            <div class="ts_text">
+                                <h4>Trần Đình Trọng</h4>
+                                <span>HLV</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ts-item set-bg" data-setbg="img/team/team-3.jpg">
+                            <div class="ts_text">
+                                <h4>Nguyễn Phú Đức</h4>
+                                <span>HLV</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ts-item set-bg" data-setbg="img/team/team-4.jpg">
+                            <div class="ts_text">
+                                <h4>Phạm Xuân Mạnh</h4>
+                                <span>HLV</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ts-item set-bg" data-setbg="img/team/team-5.jpg">
+                            <div class="ts_text">
+                                <h4>Hồ Minh Huyền</h4>
+                                <span>HLV</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ts-item set-bg" data-setbg="img/team/team-6.jpg">
+                            <div class="ts_text">
+                                <h4>Trần Khánh Ly</h4>
+                                <span>HLV</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="banner-section set-bg" data-setbg="img/banner-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="bs-text">
+                        <h2>Đăng ký ngay – Nhận nhiều ưu đãi</h2>
+                        <div class="bt-tips">Nơi sức khỏe, sắc đẹp và thể chất hội tụ</div>
+                        <a href="./services.html" class="primary-btn btn-normal appoinment-btn">Đăng Ký</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonial-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Đánh giá</span>
+                        <h2>Khách hàng của chúng tôi nói gì?</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="ts_slider owl-carousel">
+            </div>
+        </div>
+    </section>
+    <section class="contact-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contact-form-title text-center mb-5">
+                    <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
+                    <p>Chúng tôi luôn sẵn lòng lắng nghe ý kiến của bạn. Hãy gửi thông tin cho chúng tôi.</p>
+                </div>
+            </div>
+        </div>
+       <section class="contact-section spad">
+     
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8"> <form action="#" class="contact-form" id="contactForm">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input type="text" placeholder="Họ Tên*" required id="contactName">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="tel" placeholder="Số Điện Thoại*" required id="contactPhone">
+                        </div>
+                        <div class="col-lg-12">
+                            <input type="text" placeholder="Địa Chỉ (Tùy chọn)" id="contactAddress">
+                        </div>
+                        <div class="col-lg-12">
+                            <textarea placeholder="Nội Dung Yêu Cầu*" required id="contactMessage"></textarea>
+                            <button type="submit" class="primary-btn">Gửi Thông Tin</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+</section>
+    </div>
+</section>
+    <style>
+/* CSS MỚI CHO FORM LIÊN HỆ (Phong cách Tối - Dark Mode) */
+
+/* CONTAINER CHÍNH CỦA FORM */
+.contact-section {
+    background-color: #121212; /* Nền Section màu tối đậm */
+    padding: 80px 0;
+}
+
+.contact-form-title h2 {
+    color: #f36100; /* Tiêu đề màu cam nổi bật */
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.contact-form-title p {
+    color: #ccc; /* Mô tả màu xám sáng */
+    margin-bottom: 50px;
+}
+
+.contact-form {
+    padding: 30px 40px;
+    border: 1px solid #333; /* Viền tối hơn */
+    border-radius: 10px;
+    background-color: #1f1f1f; /* Nền form tối hơn nền section */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Bóng tối rõ ràng hơn */
+}
+
+/* ĐỊNH DẠNG INPUT VÀ TEXTAREA */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    height: 55px;
+    font-size: 16px;
+    color: #eee; /* Màu chữ sáng */
+    border: 1px solid #444; /* Viền tối */
+    border-radius: 5px; 
+    padding-left: 20px;
+    margin-bottom: 25px;
+    background-color: #2a2a2a; /* Nền input tối */
+    transition: all 0.3s;
+}
+
+.contact-form textarea {
+    height: 180px; 
+    padding-top: 15px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #888; /* Màu placeholder mờ */
+}
+
+/* HIỆU ỨNG FOCUS (KHI CHỌN VÀO Ô NHẬP) */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #f36100; /* Viền cam khi focus */
+    box-shadow: 0 0 0 0.25rem rgba(243, 97, 0, 0.4); /* Box-shadow cam */
+    outline: none;
+}
+
+/* NÚT GỬI THÔNG TIN */
+.contact-form .primary-btn {
+    width: 100%; 
+    max-width: 350px; 
+    display: block;
+    margin: 30px auto 0 auto;
+    padding: 15px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.1rem;
+    background-color: #f36100; /* Màu cam nổi bật */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact-form .primary-btn:hover {
+    background-color: #ff751a; /* Cam sáng hơn khi hover */
+}
+</style>
+    <div class="gettouch-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-map-marker"></i>
+                        <p>306 Hồ Tùng Mậu, Phú Diễn, Bắc Từ Liêm<br/> TP.Hà Nội</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-mobile"></i>
+                        <ul>
+                            <li>0968 868 888</li>
+                            <li>0846 686 888</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text email">
+                        <i class="fa fa-envelope"></i>
+                        <p>Support.GymLy@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="fs-about">
+                        <div class="fa-logo">
+                            <a href="#"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <p>Trải nghiệm chương trình tập luyện khoa học, giúp cải thiện sức khỏe, vóc dáng và tăng năng lượng mỗi ngày.</p>
+                        <div class="fa-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa  fa-envelope-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Liên kết hữu ích</h4>
+                        <ul>
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Trang chủ</a></li>
+                            <li><a href="#">Đầu trang</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Hỗ trợ</h4>
+                        <ul>
+                            <li><a href="#">Đăng nhập</a></li>
+                            <li><a href="#">Gói tập</a></li>
+                            <li><a href="#">Đội ngũ HLV</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="fs-widget">
+                        <h4>Lời khuyên & Hướng dẫn</h4>
+                        <div class="fw-recent">
+                            <h6><a href="#">Tập luyện thể chất giúp phòng ngừa trầm cảm và lo âu</a></h6>
+                            <ul>
+                                <li>3 min read</li>
+                                <li>20 Comment</li>
+                            </ul>
+                        </div>
+                        <div class="fw-recent">
+                            <h6><a href="#">Thể hình: Bài tập hiệu quả nhất để giảm mỡ bụng và săn cơ</a></h6>
+                            <ul>
+                                <li>5 min read</li>
+                                <li>25 Comment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p>&copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Welcome to <i class="fa fa-heart" aria-hidden="true"></i> <a href="https://colorlib.com" target="_blank">GymLy</a>
+  </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.barfiller.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+    
+    // --- BẮT ĐẦU LOGIC ĐÁNH GIÁ ---
+    
+    const mockTestimonials = [
+        {
+            name: "Nguyễn Khánh Linh",
+            text: "Chương trình tập luyện được thiết kế khoa học, giúp cải thiện sức khỏe, vóc dáng và tăng năng lượng mỗi ngày.<br /> Môi trường tập luyện tích cực cùng huấn luyện viên giàu kinh nghiệm<br /> Nên thử ngay.",
+            rating: 5,
+            img: "img/testimonial/testimonial-1.jpg"
+        },
+        {
+            name: "Bùi Công Nam",
+            text: "Huấn luyện viên giàu kinh nghiệm luôn nhiệt tình đồng hành trong quá trình tập luyện<br /> Trang bị máy móc hiện đại và có kế hoạch ăn uống phù hợp<br /> Hiệu quả tập luyện rất rõ ràng, đáng đầu tư.",
+            rating: 5,
+            img: "img/testimonial/testimonial-2.jpg"
+        }
+    ];
+
+    function initTestimonials() {
+        if (!localStorage.getItem('gymTestimonials')) {
+            localStorage.setItem('gymTestimonials', JSON.stringify(mockTestimonials));
+        }
+    }
+
+    // 2. Render các đánh giá ra carousel.
+    function renderTestimonials() {
+        const testimonials = JSON.parse(localStorage.getItem('gymTestimonials')) || [];
+        const slider = $('.ts_slider');
+        
+        try {
+            slider.owlCarousel('destroy');
+        } catch(e) {}
+        slider.empty(); 
+
+        if (testimonials.length === 0) {
+            slider.html('<p class="text-center" style="color: white;">Chưa có đánh giá nào.</p>');
+            return;
+        }
+        
+        // Thêm từng đánh giá vào
+        testimonials.forEach(item => {
+            let ratingStars = '';
+            for (let i = 0; i < 5; i++) {
+                ratingStars += `<i class="fa fa-star${i < item.rating ? '' : '-o'}"></i>`;
+            }
+            
+            // Cấu trúc HTML cho một mục đánh giá.
+            const itemHtml = `
+                <div class="ts_item">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            
+                            <div class="ti_text" style="padding-top: 0;"> <p>${item.text}</p>
+                                <h5>${item.name}</h5>
+                                <div class="tt-rating">
+                                    ${ratingStars}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            slider.append(itemHtml);
+        });
+        
+        slider.owlCarousel({
+            items: 1,
+            loop: testimonials.length > 1, 
+            autoplay: true,
+            smartSpeed: 1000,
+            mouseDrag: true,
+            dots: true,
+            nav: false
+        });
+    }
+
+     
+
+
+    // --- LOGIC ĐĂNG NHẬP ---
+    document.addEventListener('DOMContentLoaded', function() {
+    
+        // Khởi tạo và hiển thị đánh giá khi tải trang.
+        initTestimonials();
+        renderTestimonials();
+
+        // Xử lý trạng thái đăng nhập.
+        const user = JSON.parse(localStorage.getItem('gymUser'));
+        const authText = document.getElementById('auth-text');
+        const authLink = document.getElementById('auth-link');
+        const authItem = document.getElementById('auth-menu-item');
+
+        if (user) {
+          authText.innerHTML = `Hi, ${user.ten} <small>(Logout)</small>`;
+          authLink.href = '#'; 
+          authLink.onclick = function(e) {
+            e.preventDefault();
+            if (confirm('Bạn có chắc muốn đăng xuất?')) {
+              localStorage.removeItem('gymUser');
+              window.location.href = window.location.href; 
+            }
+          };
+          if (window.location.pathname.includes('account.html')) {
+            authItem.classList.add('active');
+          }
+        } else {
+          authText.innerText = 'Login';
+          authLink.href = 'account.html'; 
+          authLink.onclick = null; 
+        }
+    });
+
+    // --- LOGIC XỬ LÝ FORM LIÊN HỆ MỚI (Gửi AJAX đến PHP) ---
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('contactName').value.trim();
+    const phone = document.getElementById('contactPhone').value.trim();
+    const address = document.getElementById('contactAddress').value.trim();
+    const message = document.getElementById('contactMessage').value.trim();
+
+    // Kiểm tra dữ liệu bắt buộc
+    if (!name || !phone || !message) {
+        alert('Vui lòng điền đầy đủ Họ tên, Số điện thoại và Nội dung yêu cầu.');
+        return;
+    }
+
+    const contactData = {
+        hoten: name,
+        sdt: phone,
+        diachi: address,
+        noidung: message
+    };
+
+    // Gửi dữ liệu bằng Fetch API đến file PHP mới
+    fetch('submit_contact.php', { // Đảm bảo đường dẫn đúng
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(contactData),
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.success) {
+            alert(result.message);
+            // Reset form sau khi gửi thành công
+            document.getElementById('contactForm').reset();
+        } else {
+            // Hiển thị lỗi từ server
+            alert('Gửi thất bại: ' + (result.message || 'Lỗi không xác định.'));
+        }
+    })
+    .catch(error => {
+        console.error('Lỗi kết nối hoặc server:', error);
+        alert('Lỗi kết nối mạng hoặc máy chủ. Vui lòng thử lại.');
+    });
+});
+// --- KẾT THÚC LOGIC FORM LIÊN HỆ ---
+
+</script>
+
+<script>
+    // ==========================================
+    // 1. PHẦN LOGIC TÌM KIẾM (NEW FEATURE)
+    // ==========================================
+    $(document).ready(function() {
+        // Hàm thực hiện tìm kiếm
+        function performSearch(e) {
+            e.preventDefault(); // Ngăn form reload
+            
+            var keyword = $('#search-input').val().trim();
+            
+            // Xóa các highlight cũ
+            $('.search-highlight').each(function() {
+                $(this).replaceWith($(this).html());
+            });
+
+            if (keyword === "") {
+                alert("Vui lòng nhập từ khóa tìm kiếm!");
+                return;
+            }
+
+            // Tìm kiếm trong nội dung trang (trừ thẻ script, style)
+            var contentArea = $('body'); 
+            var found = false;
+
+            // Quét qua các node text
+            contentArea.find('*').contents().filter(function() {
+                // Chỉ lấy text node, và không nằm trong script/style
+                return this.nodeType === 3 && 
+                       this.nodeValue.trim() !== "" &&
+                       $(this).parent().prop("tagName") !== "SCRIPT" &&
+                       $(this).parent().prop("tagName") !== "STYLE";
+            }).each(function() {
+                var textNode = $(this);
+                var textContent = textNode.text();
+                
+                // Regex tìm kiếm không phân biệt hoa thường
+                var regex = new RegExp("(" + keyword + ")", "gi");
+                
+                if (regex.test(textContent)) {
+                    found = true;
+                    // Bọc từ khóa tìm thấy vào thẻ span
+                    var newHtml = textContent.replace(regex, '<span class="search-highlight">$1</span>');
+                    $(this).replaceWith(newHtml);
+                }
+            });
+
+            if (found) {
+                // Đóng khung search
+                $('.search-model').fadeOut(400);
+                $('#search-input').val(''); // Xóa input sau khi tìm
+
+                // Cuộn tới kết quả đầu tiên
+                var firstResult = $('.search-highlight').first();
+                $('html, body').animate({
+                    scrollTop: firstResult.offset().top - 150
+                }, 800);
+            } else {
+                alert('Không tìm thấy kết quả nào cho: "' + keyword + '"');
+            }
+        }
+
+        // Bắt sự kiện nhấn Enter trong ô input
+        $('#search-input').on('keypress', function(e) {
+            if(e.which == 13) {
+                performSearch(e);
+            }
+        });
+        
+        // Bắt sự kiện submit form (dự phòng)
+        $('.search-model-form').on('submit', function(e) {
+            performSearch(e);
+        });
+    });
+</script>
+</body>
+
+</html>

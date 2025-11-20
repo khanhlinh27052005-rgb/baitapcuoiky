@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gym Template">
+    <meta name="keywords" content="Gym, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GymLy | Đội ngũ HLV</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+<style>
+/* Định dạng item HLV có thể click */
+.team-item { cursor: pointer; }
+
+/* Popup chung (Style dùng chung) */
+.service-popup-modern {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  font-family: 'Muli', sans-serif;
+}
+.popup-title { font-family: 'Oswald', sans-serif; font-weight: 600; color: #222; font-size: 2rem; margin-bottom: 8px; }
+.popup-code { color: #e74c3c; font-weight: 500; margin-bottom: 20px; }
+.popup-description { color: #666; font-size: 1rem; line-height: 1.7; }
+.section-subtitle { font-weight: 600; color: #333; margin-bottom: 12px; font-size: 1.1rem; display: flex; align-items: center; }
+.benefit-list, .feature-list { padding-left: 20px; line-height: 1.9; color: #555; }
+.benefit-list li::marker, .feature-list li::marker { color: #27ae60; }
+.trainer-name { font-weight: 600; color: #222; margin: 8px 0 4px; }
+.trainer-desc { color: #777; font-style: italic; }
+
+/* CSS cho nút (Style dùng chung) */
+.primary-btn, .secondary-btn {
+  padding: 12px 28px; border-radius: 30px; font-weight: 600; font-size: 0.95rem;
+  transition: all 0.3s ease; border: none; cursor: pointer;
+}
+.primary-btn { background: #e74c3c; color: white; }
+.primary-btn:hover { background: #c0392b; transform: translateY(-2px); }
+.secondary-btn { background: #f1f1f1; color: #666; margin-left: 10px; }
+.secondary-btn:hover { background: #e0e0e0; }
+
+/* CSS tùy chỉnh cho popup HLV */
+.benefit-list li strong {
+    color: #333;
+    margin-right: 5px;
+}
+/* Đảm bảo danh sách HLV hiển thị đẹp */
+.benefit-list {
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+.benefit-list li {
+    word-wrap: break-word; /* Chống tràn chữ nếu email/sdt quá dài */
+}
+
+
+@media (max-width: 576px) {
+  #hlv-popup { padding: 25px 20px; margin: 20px; }
+}
+        .search-highlight {
+            background-color: #f7b02a;
+            color: #000;
+            font-weight: bold;
+            padding: 2px 5px;
+            border-radius: 3px;
+            box-shadow: 0 0 10px #f7b02a;
+        }
+</style>
+
+</head>
+
+<body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="canvas-search search-switch">
+            <i class="fa fa-search"></i>
+        </div>
+        <nav class="canvas-menu mobile-menu">
+            <ul>
+                <li><a href="./index.html">Trang chủ</a></li>
+                <li><a href="./about-us.html">Giới thiệu</a></li>
+                <li><a href="./services.html">Gói tập</a></li>
+                <li><a href="./bmi-calculator.html">Tính BMI</a></li>
+                <li><a href="./team.html">Đội ngũ HLV</a></li>
+                <li id="auth-menu-item">
+  <a href="/account.html" id="auth-link">
+    <span id="auth-text">Đăng nhập</span>
+  </a>
+</li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="canvas-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo">
+                        <a href="./index.html">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="nav-menu">
+                        <ul>
+  <li><a href="index.html">Trang chủ</a></li>
+  <li><a href="about-us.html">Giới thiệu</a></li>
+  <li><a href="services.html">Gói tập</a></li>
+  <li><a href="bmi-calculator.html">Tính BMI</a></li>
+  <li class="active"><a href="team.html">Đội ngũ HLV</a></li>
+<li id="auth-menu-item">
+  <a href="account.html" id="auth-link">
+    <span id="auth-text">Đăng nhập</span>
+  </a>
+</li>
+</ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="top-option">
+                        <div class="to-search search-switch">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <div class="to-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-text">
+                        <h2>Đội ngũ HLV</h2>
+                        <div class="bt-option">
+                            <a href="./index.html">Trang chủ</a>
+                            <span>Đội ngũ HLV</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="team-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="team-title">
+                        <div class="section-title">
+                            <span>Đội ngũ HLV</span>
+                            <h2>Tập luyện cùng chuyên gia</h2>
+                        </div>
+                        <a href="./services.html" class="primary-btn btn-normal appoinment-btn">Đăng Ký</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="ts-slider owl-carousel">
+                    <div class="col-lg-4">
+                        <div class="ts-item set-bg" data-setbg="img/team/team-1.jpg" data-name="Ngô Thị Hoa" data-gender="Nữ" data-sdt="0912345671" data-email="hoa.ngo@gym.com" data-experience="5 năm" data-specialty="Yoga và Thiền" data-achievements="Giải nhất Yoga Quốc gia 2022">
+                            <div class="ts_text">
+                                <h4>Ngô Thị Hoa</h4>
+                                <span>HLV</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ts-item set-bg" data-setbg="img/team/team-2.jpg" data-name="Trần Đình Trọng" data-gender="Nam" data-sdt="0912345672" data-email="trong.tran@gym.com" data-experience="7 năm" data-specialty="Boxing và Cardio" data-achievements="Vô địch Boxing TP.HCM 2020">
+                            <div class="ts_text">
+                                <h4>Trần Đình Trọng</h4>
+                                <span>HLV</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ts-item set-bg" data-setbg="img/team/team-3.jpg" data-name="Nguyễn Phú Đức" data-gender="Nam" data-sdt="0912345673" data-email="duc.nguyen@gym.com" data-experience="4 năm" data-specialty="Gym và Sức bền" data-achievements="Chứng chỉ PT Quốc tế 2021">
+                            <div class="ts_text">
+                                <h4>Nguyễn Phú Đức</h4>
+                                <span>HLV</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ts-item set-bg" data-setbg="img/team/team-4.jpg" data-name="Phạm Xuân Mạnh" data-gender="Nam" data-sdt="0912345674" data-email="manh.pham@gym.com" data-experience="6 năm" data-specialty="Crossfit" data-achievements="Top 10 Crossfit Games 2023">
+                            <div class="ts_text">
+                                <h4>Phạm Xuân Mạnh</h4>
+                                <span>HLV</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ts-item set-bg" data-setbg="img/team/team-5.jpg" data-name="Hồ Minh Huyền" data-gender="Nữ" data-sdt="0912345675" data-email="huyen.ho@gym.com" data-experience="3 năm" data-specialty="Pilates" data-achievements="Chuyên gia Pilates Certified">
+                            <div class="ts_text">
+                                <h4>Hồ Minh Huyền</h4>
+                                <span>HLV</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ts-item set-bg" data-setbg="img/team/team-6.jpg" data-name="Trần Khánh Ly" data-gender="Nữ" data-sdt="0912345676" data-email="ly.tran@gym.com" data-experience="8 năm" data-specialty="Yoga nâng cao" data-achievements="Sư phụ Yoga Quốc tế">
+                            <div class="ts_text">
+                                <h4>Trần Khánh Ly</h4>
+                                <span>HLV</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="gettouch-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-map-marker"></i>
+                        <p>306 Hồ Tùng Mậu, Phú Diễn, Bắc Từ Liêm<br/> TP.Hà Nội</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-mobile"></i>
+                        <ul>
+                            <li>0968 868 888</li>
+                            <li>0846 686 888</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text email">
+                        <i class="fa fa-envelope"></i>
+                        <p>Support.GymLy@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="fs-about">
+                        <div class="fa-logo">
+                            <a href="#"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <p>Trải nghiệm chương trình tập luyện khoa học, giúp cải thiện sức khỏe, vóc dáng và tăng năng lượng mỗi ngày.</p>
+                        <div class="fa-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa  fa-envelope-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Liên kết hữu ích</h4>
+                        <ul>
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Trang chủ</a></li>
+                            <li><a href="#">Đầu trang</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Hỗ trợ</h4>
+                        <ul>
+                            <li><a href="#">Đăng nhập</a></li>
+                            <li><a href="#">Gói tập</a></li>
+                            <li><a href="#">Đội ngũ HLV</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="fs-widget">
+                        <h4>Lời khuyên & Hướng dẫn</h4>
+                        <div class="fw-recent">
+                            <h6><a href="#">Tập luyện thể chất giúp phòng ngừa trầm cảm và lo âu</a></h6>
+                            <ul>
+                                <li>3 min read</li>
+                                <li>20 Comment</li>
+                            </ul>
+                        </div>
+                        <div class="fw-recent">
+                            <h6><a href="#">Thể hình: Bài tập hiệu quả nhất để giảm mỡ bụng và săn cơ</a></h6>
+                            <ul>
+                                <li>5 min read</li>
+                                <li>25 Comment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p>&copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Welcome to <i class="fa fa-heart" aria-hidden="true"></i> <a href="https://colorlib.com" target="_blank">GymLy</a>
+  </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.barfiller.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const user = JSON.parse(localStorage.getItem('gymUser'));
+    const authText = document.getElementById('auth-text');
+    const authLink = document.getElementById('auth-link');
+    const authItem = document.getElementById('auth-menu-item');
+
+    if (user) {
+      // Trạng thái đã đăng nhập
+      authText.innerHTML = `Hi, ${user.ten} <small>(Logout)</small>`;
+      authLink.href = '#'; // Ngăn chuyển trang
+      authLink.onclick = function(e) {
+        e.preventDefault();
+        if (confirm('Bạn có chắc muốn đăng xuất?')) {
+          localStorage.removeItem('gymUser');
+          window.location.href = window.location.href; // Reload trang hiện tại
+        }
+      };
+      // Active nếu đang ở account.html
+      if (window.location.pathname.includes('account.html')) {
+        authItem.classList.add('active');
+      }
+    } else {
+      // Trạng thái chưa đăng nhập
+      authText.innerText = 'Login';
+      authLink.href = 'account.html'; // Đảm bảo luôn có link
+      authLink.onclick = null; // Xóa onclick cũ
+    }
+  });
+</script>
+
+
+<div id="hlv-popup" class="zoom-anim-dialog mfp-hide service-popup-modern">
+  <div class="popup-header text-center mb-4">
+    <h3 class="popup-title" id="hlv_name_popup">Tên HLV</h3>
+  </div>
+  
+  <img src="" alt="Ảnh HLV" id="hlv_image" class="img-fluid rounded shadow-sm mb-4 mx-auto d-block" style="max-height: 280px; width: auto; object-fit: cover; object-position: top;">
+  
+  <p class="popup-description text-center mb-4 px-3" id="hlv_specialty_popup">Chuyên môn HLV</p>
+  
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <h5 class="section-subtitle">Thông tin chi tiết</h5>
+      <ul class="benefit-list">
+        <li id="hlv_gender_popup"><strong>Giới tính:</strong> <span></span></li>
+        <li id="hlv_sdt_popup"><strong>SĐT:</strong> <span></span></li>
+        <li id="hlv_email_popup"><strong>Email:</strong> <span></span></li>
+      </ul>
+    </div>
+    <div class="col-md-4 mb-4">
+      <h5 class="section-subtitle">Thành tích</h5>
+      <ul class="benefit-list" id="hlv_achievements_popup">
+        </ul>
+    </div>
+    <div class="col-md-4 mb-4">
+      <h5 class="section-subtitle">Kinh nghiệm</h5>
+      <ul class="benefit-list" id="hlv_experience_popup">
+         </ul>
+    </div>
+  </div>
+
+  <hr class="my-4">
+  
+  <div class="text-center">
+      <button type="button" class="secondary-btn" onclick="$.magnificPopup.close()" style="margin-left: 0;">Đóng</button>
+  </div>
+</div>
+<script>
+$(document).ready(function() {
+  $('.ts-item').on('click', function(e) {
+    e.preventDefault();
+    const item = $(this);
+    
+    // Lấy dữ liệu từ data attributes
+    const name = item.data('name');
+    const specialty = item.data('specialty');
+    const imageUrl = item.data('setbg');
+    // Dữ liệu cho 3 mục
+    const gender = item.data('gender');
+    const sdt = item.data('sdt');
+    const email = item.data('email');
+    const achievements = item.data('achievements');
+    const experience = item.data('experience');
+
+    // Điền dữ liệu chung vào popup
+    $('#hlv_name_popup').text(name);
+    $('#hlv_image').attr('src', imageUrl);
+    $('#hlv_image').attr('alt', name);
+    $('#hlv_specialty_popup').text(specialty);
+    
+    // Cột 1: Điền thông tin chi tiết
+    $('#hlv_gender_popup span').text(gender);
+    $('#hlv_sdt_popup span').text(sdt);
+    $('#hlv_email_popup span').text(email);
+
+    // Cột 2: Điền thành tích
+    const achievementsList = $('#hlv_achievements_popup');
+    achievementsList.empty(); // Xóa cũ
+    achievementsList.append(`<li>${achievements}</li>`); // Thêm thành tích
+
+    // Cột 3: Điền kinh nghiệm
+    const experienceList = $('#hlv_experience_popup');
+    experienceList.empty(); // Xóa cũ
+    experienceList.append(`<li>${experience}</li>`); // Thêm kinh nghiệm
+
+    // Mở popup
+    $.magnificPopup.open({
+        items: { src: '#hlv-popup' },
+        type: 'inline',
+        fixedContentPos: false,
+        fixedBgPos: true,
+        overflowY: 'auto',
+        closeBtnInside: true,
+        preloader: false,
+        midClick: true,
+        removalDelay: 300,
+        mainClass: 'my-mfp-zoom-in'
+    });
+  });
+});
+</script>
+<script>
+    // ==========================================
+    // 1. PHẦN LOGIC TÌM KIẾM (NEW FEATURE)
+    // ==========================================
+    $(document).ready(function() {
+        // Hàm thực hiện tìm kiếm
+        function performSearch(e) {
+            e.preventDefault(); // Ngăn form reload
+            
+            var keyword = $('#search-input').val().trim();
+            
+            // Xóa các highlight cũ
+            $('.search-highlight').each(function() {
+                $(this).replaceWith($(this).html());
+            });
+
+            if (keyword === "") {
+                alert("Vui lòng nhập từ khóa tìm kiếm!");
+                return;
+            }
+
+            // Tìm kiếm trong nội dung trang (trừ thẻ script, style)
+            var contentArea = $('body'); 
+            var found = false;
+
+            // Quét qua các node text
+            contentArea.find('*').contents().filter(function() {
+                // Chỉ lấy text node, và không nằm trong script/style
+                return this.nodeType === 3 && 
+                       this.nodeValue.trim() !== "" &&
+                       $(this).parent().prop("tagName") !== "SCRIPT" &&
+                       $(this).parent().prop("tagName") !== "STYLE";
+            }).each(function() {
+                var textNode = $(this);
+                var textContent = textNode.text();
+                
+                // Regex tìm kiếm không phân biệt hoa thường
+                var regex = new RegExp("(" + keyword + ")", "gi");
+                
+                if (regex.test(textContent)) {
+                    found = true;
+                    // Bọc từ khóa tìm thấy vào thẻ span
+                    var newHtml = textContent.replace(regex, '<span class="search-highlight">$1</span>');
+                    $(this).replaceWith(newHtml);
+                }
+            });
+
+            if (found) {
+                // Đóng khung search
+                $('.search-model').fadeOut(400);
+                $('#search-input').val(''); // Xóa input sau khi tìm
+
+                // Cuộn tới kết quả đầu tiên
+                var firstResult = $('.search-highlight').first();
+                $('html, body').animate({
+                    scrollTop: firstResult.offset().top - 150
+                }, 800);
+            } else {
+                alert('Không tìm thấy kết quả nào cho: "' + keyword + '"');
+            }
+        }
+
+        // Bắt sự kiện nhấn Enter trong ô input
+        $('#search-input').on('keypress', function(e) {
+            if(e.which == 13) {
+                performSearch(e);
+            }
+        });
+        
+        // Bắt sự kiện submit form (dự phòng)
+        $('.search-model-form').on('submit', function(e) {
+            performSearch(e);
+        });
+    });
+</script>
+</body>
+
+</html>

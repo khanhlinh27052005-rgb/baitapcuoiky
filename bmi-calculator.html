@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gym Template">
+    <meta name="keywords" content="Gym, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GymLy | BMI</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        .search-highlight {
+            background-color: #f7b02a;
+            color: #000;
+            font-weight: bold;
+            padding: 2px 5px;
+            border-radius: 3px;
+            box-shadow: 0 0 10px #f7b02a;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="canvas-search search-switch">
+            <i class="fa fa-search"></i>
+        </div>
+        <nav class="canvas-menu mobile-menu">
+            <ul>
+                <li><a href="./index.html">Trang chủ</a></li>
+                <li><a href="./about-us.html">Giới thiệu</a></li>
+                <li><a href="./services.html">Gói tập</a></li>
+                <li><a href="./team.html">Đội ngũ HLV</a></li>
+                <li id="auth-menu-item">
+  <a href="#" id="auth-link">
+    <span id="auth-text">Đăng nhập</span>
+  </a>
+</li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="canvas-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo">
+                        <a href="./index.html">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="nav-menu">
+                        <ul>
+  <li><a href="index.html">Trang chủ</a></li>
+  <li><a href="about-us.html">Giới thiệu</a></li>
+  
+  <li><a href="services.html">Gói tập</a></li>
+  <li class="active"><a href="bmi-calculator.html">Tính BMI</a></li>
+  <li><a href="team.html">Đội ngũ HLV</a></li>
+<li id="auth-menu-item">
+  <a href="account.html" id="auth-link">
+    <span id="auth-text">Đăng nhập</span>
+  </a>
+</li>
+</ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="top-option">
+                        <div class="to-search search-switch">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <div class="to-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-text">
+                        <h2>Tính BMI</h2>
+                        <div class="bt-option">
+                            <a href="./index.html">Trang chủ</a>
+                            <span>Tính BMI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bmi-calculator-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title chart-title">
+                        <span>Kiểm tra chỉ số cơ thể</span>
+                        <h2>Bảng chỉ số BMI</h2>
+                    </div>
+                    <div class="chart-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>BMI</th>
+                                    <th>Trạng thái</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="point">Dưới 18.5</td>
+                                    <td>Thiếu cân</td>
+                                </tr>
+                                <tr>
+                                    <td class="point">18.5 - 24.9</td>
+                                    <td>Bình thường</td>
+                                </tr>
+                                <tr>
+                                    <td class="point">25.0 - 29.9</td>
+                                    <td>Thừa cân</td>
+                                </tr>
+                                <tr>
+                                    <td class="point">30.0 trở lên</td>
+                                    <td>Béo phì</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-title chart-calculate-title">
+                        <span>Kiểm tra cơ thể của bạn</span>
+                        <h2>Tính BMI của bạn</h2>
+                    </div>
+                    <div class="chart-calculate-form">
+                        <p>Xác định tình trạng cân nặng và vóc dáng bằng chỉ số BMI. Chỉ vài bước đơn giản, bạn sẽ biết được tình trạng cân nặng của bản thân, từ đó điều chỉnh chế độ tập luyện và dinh dưỡng phù hợp.</p>
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input type="text" placeholder="Chiều cao / cm">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" placeholder="Cân nặng / kg">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" placeholder="Tuổi">
+                                </div>
+                                <div class="col-sm-6">
+                                <select id="reg-gioitinh" class="form-control" style="background:#111; color:#fff; border:1px solid #333; height:50px; margin-bottom:15px;">
+                                <option value="">Giới tính</option>
+                                <option value="Nam">Nam</option>
+                                <option value="Nữ">Nữ</option>
+                                <option value="Khác">Khác</option>
+                            </select>
+                                </div>
+                                <div class="col-lg-12">
+                                    <button type="submit">Tính</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="gettouch-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-map-marker"></i>
+                        <p>306 Hồ Tùng Mậu, Phú Diễn, Bắc Từ Liêm<br/> TP.Hà Nội</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-mobile"></i>
+                        <ul>
+                            <li>0968 868 888</li>
+                            <li>0846 686 888</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text email">
+                        <i class="fa fa-envelope"></i>
+                        <p>Support.GymLy@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="fs-about">
+                        <div class="fa-logo">
+                            <a href="#"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <p>Trải nghiệm chương trình tập luyện khoa học, giúp cải thiện sức khỏe, vóc dáng và tăng năng lượng mỗi ngày.</p>
+                        <div class="fa-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa  fa-envelope-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Liên kết hữu ích</h4>
+                        <ul>
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Trang chủ</a></li>
+                            <li><a href="#">Đầu trang</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Hỗ trợ</h4>
+                        <ul>
+                            <li><a href="#">Đăng nhập</a></li>
+                            <li><a href="#">Gói tập</a></li>
+                            <li><a href="#">Đội ngũ HLV</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="fs-widget">
+                        <h4>Lời khuyên & Hướng dẫn</h4>
+                        <div class="fw-recent">
+                            <h6><a href="#">Tập luyện thể chất giúp phòng ngừa trầm cảm và lo âu</a></h6>
+                            <ul>
+                                <li>3 min read</li>
+                                <li>20 Comment</li>
+                            </ul>
+                        </div>
+                        <div class="fw-recent">
+                            <h6><a href="#">Thể hình: Bài tập hiệu quả nhất để giảm mỡ bụng và săn cơ</a></h6>
+                            <ul>
+                                <li>5 min read</li>
+                                <li>25 Comment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p>&copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Welcome to <i class="fa fa-heart" aria-hidden="true"></i> <a href="https://colorlib.com" target="_blank">GymLy</a>
+  </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.barfiller.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const user = JSON.parse(localStorage.getItem('gymUser'));
+    const authText = document.getElementById('auth-text');
+    const authLink = document.getElementById('auth-link');
+    const authItem = document.getElementById('auth-menu-item');
+
+    if (user) {
+      // ĐÃ ĐĂNG NHẬP
+      authText.innerHTML = `Hi, ${user.ten} <small>(Logout)</small>`;
+      authLink.href = '#'; // Ngăn chuyển trang
+      authLink.onclick = function(e) {
+        e.preventDefault();
+        if (confirm('Bạn có chắc muốn đăng xuất?')) {
+          localStorage.removeItem('gymUser');
+          window.location.href = window.location.href; // Reload trang hiện tại
+        }
+      };
+      // Active nếu đang ở account.html
+      if (window.location.pathname.includes('account.html')) {
+        authItem.classList.add('active');
+      }
+    } else {
+      // CHƯA ĐĂNG NHẬP
+      authText.innerText = 'Login';
+      authLink.href = 'account.html'; // Đảm bảo luôn có link
+      authLink.onclick = null; // Xóa onclick cũ
+    }
+  });
+
+  //Tính BMI
+  document.addEventListener("DOMContentLoaded", function () {
+    // Lấy form và các input
+    const form = document.querySelector(".chart-calculate-form form");
+    const inputs = form.querySelectorAll("input");
+    
+    // Tạo phần hiển thị kết quả BMI
+    const resultDiv = document.createElement("div");
+    resultDiv.style.marginTop = "15px";
+    resultDiv.style.fontWeight = "600";
+    form.appendChild(resultDiv);
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const height = parseFloat(inputs[0].value); 
+      const weight = parseFloat(inputs[1].value); 
+
+      if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
+        resultDiv.style.color = "red";
+        resultDiv.textContent = " Vui lòng nhập chiều cao và cân nặng hợp lệ!";
+        return;
+      }
+
+      // Tính BMI
+      const heightM = height / 100; // đổi cm sang m
+      const bmi = (weight / (heightM * heightM)).toFixed(1);
+
+      // Xác định trạng thái
+      let status = "";
+      if (bmi < 18.5) status = "Thiếu cân";
+      else if (bmi < 25) status = "Bình thường";
+      else if (bmi < 30) status = "Thừa cân";
+      else status = "Béo phì";
+
+      // Hiển thị kết quả
+      resultDiv.style.color = "#fff";
+      resultDiv.innerHTML = `
+         <strong>Chỉ số BMI của bạn:</strong> ${bmi} <br>
+         <strong>Tình trạng:</strong> ${status}
+      `;
+    });
+  });
+</script>
+<script>
+    // ==========================================
+    // 1. PHẦN LOGIC TÌM KIẾM (NEW FEATURE)
+    // ==========================================
+    $(document).ready(function() {
+        // Hàm thực hiện tìm kiếm
+        function performSearch(e) {
+            e.preventDefault(); // Ngăn form reload
+            
+            var keyword = $('#search-input').val().trim();
+            
+            // Xóa các highlight cũ
+            $('.search-highlight').each(function() {
+                $(this).replaceWith($(this).html());
+            });
+
+            if (keyword === "") {
+                alert("Vui lòng nhập từ khóa tìm kiếm!");
+                return;
+            }
+
+            // Tìm kiếm trong nội dung trang (trừ thẻ script, style)
+            var contentArea = $('body'); 
+            var found = false;
+
+            // Quét qua các node text
+            contentArea.find('*').contents().filter(function() {
+                // Chỉ lấy text node, và không nằm trong script/style
+                return this.nodeType === 3 && 
+                       this.nodeValue.trim() !== "" &&
+                       $(this).parent().prop("tagName") !== "SCRIPT" &&
+                       $(this).parent().prop("tagName") !== "STYLE";
+            }).each(function() {
+                var textNode = $(this);
+                var textContent = textNode.text();
+                
+                // Regex tìm kiếm không phân biệt hoa thường
+                var regex = new RegExp("(" + keyword + ")", "gi");
+                
+                if (regex.test(textContent)) {
+                    found = true;
+                    // Bọc từ khóa tìm thấy vào thẻ span
+                    var newHtml = textContent.replace(regex, '<span class="search-highlight">$1</span>');
+                    $(this).replaceWith(newHtml);
+                }
+            });
+
+            if (found) {
+                // Đóng khung search
+                $('.search-model').fadeOut(400);
+                $('#search-input').val(''); // Xóa input sau khi tìm
+
+                // Cuộn tới kết quả đầu tiên
+                var firstResult = $('.search-highlight').first();
+                $('html, body').animate({
+                    scrollTop: firstResult.offset().top - 150
+                }, 800);
+            } else {
+                alert('Không tìm thấy kết quả nào cho: "' + keyword + '"');
+            }
+        }
+
+        // Bắt sự kiện nhấn Enter trong ô input
+        $('#search-input').on('keypress', function(e) {
+            if(e.which == 13) {
+                performSearch(e);
+            }
+        });
+        
+        // Bắt sự kiện submit form (dự phòng)
+        $('.search-model-form').on('submit', function(e) {
+            performSearch(e);
+        });
+    });
+</script>
+</body>
+</html>

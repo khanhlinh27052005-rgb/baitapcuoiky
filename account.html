@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gym Template">
+    <meta name="keywords" content="Gym, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GymLy | Account</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="canvas-search search-switch">
+            <i class="fa fa-search"></i>
+        </div>
+        <nav class="canvas-menu mobile-menu">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="about-us.html">Giới thiệu</a></li>
+                <li><a href="services.html">Gói tập</a></li>
+                <li><a href="bmi-calculator.html">Tính BMI</a></li>
+                <li><a href="team.html">Đội ngũ HLV</a></li>
+<li id="auth-menu-item">
+  <a href="/account.html" id="auth-link">
+    <span id="auth-text">Đăng nhập</span>
+  </a>
+</li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="canvas-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <header class="header-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="logo">
+          <a href="index.html">
+            <img src="img/logo.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="about-us.html">Giới thiệu</a></li>
+            <li><a href="services.html">Gói tập</a></li>
+            <li><a href="bmi-calculator.html">Tính BMI</a></li>
+            <li><a href="team.html">Đội ngũ HLV</a></li>
+            <li class="active" id="auth-menu-item">
+              <a href="#" id="auth-link">
+                <span id="auth-text">Đăng nhập</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-lg-3">
+        <div class="top-option">
+          <div class="to-search search-switch">
+            <i class="fa fa-search"></i>
+          </div>
+          <div class="to-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="canvas-open">
+      <i class="fa fa-bars"></i>
+    </div>
+  </div>
+</header>
+<section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb-bg.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb-text">
+                    <h2 id="page-title">Đăng nhập</h2>
+                    <div class="bt-option">
+                        <a href="index.html">Trang chủ</a>
+                        <span id="breadcrumb-span">Đăng nhập</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-title contact-title">
+                    <span>Tài khoản</span>
+                    <h2 id="page-title">ĐĂNG NHẬP</h2>
+                </div>
+                <div class="contact-widget">
+                    <p>Quản lý tài khoản của bạn tại GymLy. Đăng nhập hoặc tạo tài khoản mới để đặt Lịch tập.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="leave-comment">
+
+                    <div id="login-form">
+                        <form>
+                            <input type="text" id="login-id" placeholder="Số điện thoại hoặc Email">
+                            <input type="password" id="login-pass" placeholder="Mật khẩu">
+                            <button type="button" onclick="login()" class="site-btn">Đăng nhập</button>
+                        </form>
+                        <p class="text-center mt-3 text-white">
+                            Chưa có tài khoản? <a href="#" onclick="showRegister()" class="text-primary">Đăng ký ngay</a>
+                        </p>
+                    </div>
+
+                    <div id="register-form" style="display:none;">
+                        <form id="registrationForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" id="reg-ho" placeholder="Họ">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" id="reg-ten" placeholder="Tên">
+                                </div>
+                            </div>
+                            <input type="text" id="reg-sdt" placeholder="Số điện thoại">
+                            <input type="email" id="reg-email" placeholder="Email">
+                            <select id="reg-gioitinh" class="form-control" style="background:#111; color:#fff; border:1px solid #333; height:50px; margin-bottom:15px;">
+                                <option value="">Giới tính</option>
+                                <option value="Nam">Nam</option>
+                                <option value="Nữ">Nữ</option>
+                                <option value="Khác">Khác</option>
+                            </select>
+                            <input type="password" id="reg-pass" placeholder="Mật khẩu">
+                            <input type="password" id="reg-pass2" placeholder="Nhập lại mật khẩu">
+                            <button type="button" onclick="register()" class="site-btn">Đăng ký</button>
+                        </form>
+                        <p class="text-center mt-3 text-white">
+                            Đã có tài khoản? <a href="#" onclick="showLogin()" class="text-primary">Đăng nhập</a>
+                        </p>
+                    </div>
+
+                    <div id="logged-in" style="display:none;" class="text-center text-white">
+                        <h4>Xin chào, <span id="user-name"></span>!</h4>
+                        <button onclick="logout()" class="site-btn">Đăng xuất</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="gettouch-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-map-marker"></i>
+                        <p>306 Hồ Tùng Mậu, Phú Diễn, Bắc Từ Liêm<br/> TP.Hà Nội</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-mobile"></i>
+                        <ul>
+                            <li>0968 868 888</li>
+                            <li>0846 686 888</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text email">
+                        <i class="fa fa-envelope"></i>
+                        <p>Support.GymLy@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="fs-about">
+                        <div class="fa-logo">
+                            <a href="#"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <p>Trải nghiệm chương trình tập luyện khoa học, giúp cải thiện sức khỏe, vóc dáng và tăng năng lượng mỗi ngày.</p>
+                        <div class="fa-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa  fa-envelope-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Liên kết hữu ích</h4>
+                        <ul>
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Trang chủ</a></li>
+                            <li><a href="#">Đầu trang</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Hỗ trợ</h4>
+                        <ul>
+                            <li><a href="#">Đăng nhập</a></li>
+                            <li><a href="#">Gói tập</a></li>
+                            <li><a href="#">Đội ngũ HLV</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="fs-widget">
+                        <h4>Lời khuyên & Hướng dẫn</h4>
+                        <div class="fw-recent">
+                            <h6><a href="#">Tập luyện thể chất giúp phòng ngừa trầm cảm và lo âu</a></h6>
+                            <ul>
+                                <li>3 min read</li>
+                                <li>20 Comment</li>
+                            </ul>
+                        </div>
+                        <div class="fw-recent">
+                            <h6><a href="#">Thể hình: Bài tập hiệu quả nhất để giảm mỡ bụng và săn cơ</a></h6>
+                            <ul>
+                                <li>5 min read</li>
+                                <li>25 Comment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p>&copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Welcome to <i class="fa fa-heart" aria-hidden="true"></i> <a href="https://colorlib.com" target="_blank">GymLy</a>
+  </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.barfiller.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const user = JSON.parse(localStorage.getItem('gymUser'));
+    const authText = document.getElementById('auth-text');
+    const authLink = document.getElementById('auth-link');
+    const authItem = document.getElementById('auth-menu-item');
+
+    // Cập nhật menu
+    if (user) {
+      authText.innerHTML = `Hi, ${user.ten} <small>(Logout)</small>`;
+      authLink.href = '#';
+      authLink.onclick = function(e) {
+        e.preventDefault();
+        if (confirm('Bạn có chắc muốn đăng xuất?')) {
+          localStorage.removeItem('gymUser');
+          window.location.reload();
+        }
+      };
+      if (window.location.pathname.includes('account.html')) {
+        authItem.classList.add('active');
+      }
+    } else {
+      authText.innerText = 'Login';
+      authLink.href = 'account.html';
+      authLink.onclick = null;
+    }
+
+    // XỬ LÝ TRONG TRANG account.html
+    if (window.location.pathname.includes('account.html')) {
+      if (user) {
+        showLoggedIn(user);
+      } else {
+        showLogin();
+      }
+    }
+  });
+
+  // === CÁC HÀM CHO account.html ===
+  function showLogin() {
+    document.getElementById('login-form').style.display = 'block';
+    document.getElementById('register-form').style.display = 'none';
+    document.getElementById('logged-in').style.display = 'none';
+    document.getElementById('page-title').innerText = 'Đăng nhập';
+    document.getElementById('breadcrumb-span').innerText = 'Đăng nhập';
+  }
+
+  function showRegister() {
+    document.getElementById('login-form').style.display = 'none';
+    document.getElementById('register-form').style.display = 'block';
+    document.getElementById('logged-in').style.display = 'none';
+    document.getElementById('page-title').innerText = 'Đăng ký';
+    document.getElementById('breadcrumb-span').innerText = 'Đăng ký';
+  }
+
+  function showLoggedIn(user) {
+    document.getElementById('login-form').style.display = 'none';
+    document.getElementById('register-form').style.display = 'none';
+    document.getElementById('logged-in').style.display = 'block';
+    document.getElementById('user-name').innerText = user.ho + ' ' + user.ten;
+    document.getElementById('page-title').innerText = 'Tài khoản';
+    document.getElementById('breadcrumb-span').innerText = 'Tài khoản';
+  }
+
+   
+  // Thay thế hàm login() hiện tại bằng hàm mới này:
+  function login() {
+    const id = document.getElementById('login-id').value.trim(); // Email hoặc SĐT
+    const pass = document.getElementById('login-pass').value; // Mật khẩu thô
+
+    if (!id || !pass) return alert('Vui lòng nhập Email/SĐT và Mật khẩu.');
+
+    // ===============================================
+    // ✅ BỔ SUNG ĐIỀU KIỆN ĐĂNG NHẬP ADMIN ĐẶC BIỆT
+    // ===============================================
+    if (id === 'admin@gmail.com' && pass === 'admin') {
+        // Tùy chọn: Lưu thông tin Admin vào localStorage
+        localStorage.setItem('gymUser', JSON.stringify({
+            id: id, 
+            hoten: 'Admin Hệ thống',
+            role: 'admin' // Đánh dấu vai trò Admin
+        }));
+
+        alert('Đăng nhập với quyền Admin thành công!');
+        
+        // CHUYỂN HƯỚNG ĐẾN TRANG ADMIN
+        window.location.href = 'admin/users.html'; 
+        return; // Dừng hàm, không chạy logic đăng nhập thông thường
+    }
+    
+    // ===============================================
+    // XỬ LÝ ĐĂNG NHẬP THÔNG THƯỜNG (Gọi API)
+    // ===============================================
+
+    // Chuẩn bị dữ liệu gửi đi
+    const data = {
+        id: id,
+        pass: pass
+    };
+
+    fetch('login.php', { // Gửi yêu cầu POST đến file login.php
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.success) {
+            // Đăng nhập thành công
+            const user = result.user;
+            
+            // LƯU Ý: Lưu thông tin người dùng vào localStorage để duy trì trạng thái đăng nhập
+            // Tách Họ và Tên.
+            const hotenArray = user.hoten.split(' ');
+            const ten = hotenArray.pop();
+            const ho = hotenArray.join(' '); 
+            
+            const loggedInUser = {
+                ho: ho,
+                ten: ten,
+                email: user.email,
+                memberId: user.memberId
+            };
+
+            localStorage.setItem('gymUser', JSON.stringify(loggedInUser));
+            alert('Đăng nhập thành công! Chào mừng ' + loggedInUser.ten);
+            
+            // === CHUYỂN HƯỚNG THÀNH VIÊN THƯỜNG ===
+            window.location.href = 'ThanhVien/about-us-tv.html'; 
+            
+        } else {
+            alert('Đăng nhập thất bại: ' + (result.message || 'Sai Email/SĐT hoặc Mật khẩu.'));
+        }
+    })
+    .catch(error => {
+        console.error('Lỗi kết nối:', error);
+        alert('Lỗi kết nối hoặc server. Vui lòng thử lại sau.');
+    });
+}
+
+  function register() {
+    const ho = document.getElementById('reg-ho').value.trim();
+    const ten = document.getElementById('reg-ten').value.trim();
+    const hoten = ho + ' ' + ten; // Gộp Họ và Tên
+    const sdt = document.getElementById('reg-sdt').value.trim();
+    const email = document.getElementById('reg-email').value.trim();
+    const gioitinh = document.getElementById('reg-gioitinh').value;
+    const pass = document.getElementById('reg-pass').value;
+    const pass2 = document.getElementById('reg-pass2').value;
+
+    if (pass !== pass2) return alert('Mật khẩu không khớp!');
+    if (!ho || !ten || !sdt || !email || !gioitinh || !pass) return alert('Vui lòng điền đầy đủ thông tin bắt buộc!');
+
+    // Chuẩn bị dữ liệu gửi đi
+    const data = {
+        hoten: hoten,
+        sdt: sdt,
+        email: email,
+        gioitinh: gioitinh,
+        matkhau: pass
+    };
+
+    fetch('register.php', { // Gửi yêu cầu POST đến file register.php
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.success) {
+            alert('Đăng ký thành công! Vui lòng đăng nhập.');
+            // Tùy chọn: Chuyển sang form đăng nhập hoặc tự động đăng nhập
+            showLogin(); 
+            // Xóa nội dung form
+            document.getElementById('reg-ho').value = '';
+            document.getElementById('reg-ten').value = '';
+            document.getElementById('reg-sdt').value = '';
+            document.getElementById('reg-email').value = '';
+            document.getElementById('reg-gioitinh').value = '';
+            document.getElementById('reg-pass').value = '';
+            document.getElementById('reg-pass2').value = '';
+        } else {
+            alert('Lỗi đăng ký: ' + (result.message || 'Không rõ lỗi.'));
+        }
+    })
+    .catch(error => {
+        console.error('Lỗi kết nối:', error);
+        alert('Lỗi kết nối hoặc server. Vui lòng thử lại sau.');
+    });
+}
+
+// Lưu ý: Bạn nên loại bỏ hoặc chỉnh sửa hàm login() và xử lý đăng nhập 
+// để chúng cũng gọi file PHP thay vì dùng localStorage.
+
+  function logout() {
+    localStorage.removeItem('gymUser');
+    showLogin();
+    document.getElementById('auth-text').innerText = 'Login';
+    document.getElementById('auth-link').href = 'account.html';
+  }
+</script>
+</body>
+
+</html>

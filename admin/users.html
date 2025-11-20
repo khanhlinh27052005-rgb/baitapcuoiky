@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="GymLy Template">
+    <meta name="keywords" content="GymLy, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GymLy | Quản lý người dùng</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="../css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="../css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/admin-custom.css" type="text/css">
+
+    <style>
+        /* Đồng bộ font chữ và giao diện cho các popup (modal) của Bootstrap */
+        .modal-content {
+            font-family: 'Muli', sans-serif;
+            border-radius: 16px;
+            /* Thêm bo góc cho giống popup trang service */
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            /* Thêm bóng đổ */
+            border: none;
+            padding: 15px;
+            /* Thêm padding cho đẹp hơn */
+        }
+
+        .modal-title {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            color: #222;
+            font-size: 2rem;
+            /* Giống .popup-title */
+            padding-left: 15px;
+            /* Căn lề cho tiêu đề */
+        }
+
+        .modal-header {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .modal-footer {
+            border-top: 1px solid #eee;
+        }
+
+        /* Đồng bộ form-group label */
+        .modal-body .form-group label {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 6px;
+            font-size: 0.92rem;
+        }
+
+        /* Đồng bộ form-control input/select */
+        .modal-body .form-control {
+            font-family: 'Muli', sans-serif;
+            font-size: 0.95rem;
+            border-radius: 12px;
+            border: 1.5px solid #ddd;
+            background: #f9f9f9;
+            height: calc(1.5em + .75rem + 5px);
+            /* Chỉnh chiều cao cho vừa */
+        }
+
+        .modal-body .form-control:focus {
+            border-color: #e74c3c;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.15);
+            outline: none;
+        }
+
+        .modal-body textarea.form-control {
+            height: auto;
+            /* Cho textarea tự động */
+        }
+
+        /* Đồng bộ nút bấm trong footer */
+        .modal-footer .btn {
+            font-family: 'Muli', sans-serif;
+            /* Đảm bảo nút cũng dùng Muli */
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .modal-footer .btn-primary {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .modal-footer .btn-primary:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        .modal-footer .btn-secondary {
+            background: #f1f1f1;
+            color: #666;
+        }
+
+        .modal-footer .btn-secondary:hover {
+            background: #e0e0e0;
+        }
+
+        /* === CSS MỚI: Đồng bộ layout các bảng === */
+        .tab-content .chart-table {
+            overflow-x: auto;
+            /* Thêm cuộn ngang nếu bảng quá rộng */
+        }
+
+        .tab-content .chart-table table {
+            width: 100%;
+            /* Đảm bảo bảng rộng 100% container */
+            border-collapse: collapse;
+            /* Gộp viền */
+            margin-top: 15px;
+            font-size: 0.9rem;
+            /* Cỡ chữ nhỏ hơn cho dễ nhìn */
+        }
+
+        .tab-content .chart-table th,
+        .tab-content .chart-table td {
+            padding: 12px 15px;
+            /* Thêm padding cho các ô */
+            border: 1px solid #eee;
+            /* Viền mờ ngăn cách */
+            text-align: left;
+            /* Căn trái */
+            vertical-align: middle;
+            /* Căn giữa theo chiều dọc */
+            white-space: nowrap;
+            /* Ngăn vỡ dòng tiêu đề */
+        }
+
+        .tab-content .chart-table th {
+            background-color: #f9f9f9;
+            /* Nền header */
+            font-weight: 600;
+            color: #333;
+            font-family: 'Oswald', sans-serif;
+            /* Đồng bộ font header */
+            text-transform: uppercase;
+            /* In hoa tiêu đề */
+        }
+
+        /* CSS cho nút trong bảng */
+        .btn-action {
+            padding: 5px 10px;
+            font-size: 0.85rem;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .edit-btn {
+            background-color: #3498db;
+        }
+
+        /* Xanh */
+        .delete-btn {
+            background-color: #e74c3c;
+        }
+
+        /* Đỏ */
+    </style>
+</head>
+
+<body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="canvas-search search-switch">
+            <i class="fa fa-search"></i>
+        </div>
+        <nav class="canvas-menu mobile-menu">
+            <ul>
+                <li><a href="./users.html">Trang quản trị </a></li>
+                <li><a href="../index.html">Đăng xuất</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="canvas-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <img src="../img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="nav-menu">
+                        <ul>
+                            <li class="active"><a href="./users.html"> Trang quản trị </a></li>
+                            <li><a href="../index.html">Đăng xuất</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="top-option">
+                        <div class="to-search search-switch">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <div class="to-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <section class="breadcrumb-section set-bg" data-setbg="../img/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-text">
+                        <h2>Quản trị người dùng</h2>
+                        <div class="bt-option">
+                            <a href="./index-ad.html">Trang chủ</a>
+                            <span>Quản trị</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="class-timetable-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="section-title">
+                        <span>QUẢN LÝ</span>
+                        <h2>NGƯỜI DÙNG</h2>
+                    </div>
+                    <div class="admin-sidebar">
+                        <ul>
+                            <li><a class="active" data-target="thanh-vien">Thành viên</a></li>
+                            <li><a data-target="huan-luyen-vien">Huấn luyện viên</a></li>
+                            <li><a data-target="lich">Lịch</a></li>
+                            <li><a data-target="goi-tap">Gói tập</a></li>
+                            <li><a data-target="danh-gia">Đánh giá</a></li>
+                            <li><a data-target="lien-he" id="contact-link">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div id="thanh-vien" class="tab-content">
+                        <div class="d-flex justify-content-end mb-4">
+                            <button class="primary-btn" onclick="editMember(-1)">
+                                <i class="fa fa-plus"></i> Thêm thành viên
+                            </button>
+                        </div>
+                        <div class="chart-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Mã TV</th>
+                                        <th>Họ tên</th>
+                                        <th>SDT</th>
+                                        <th>Email</th>
+                                        <th>Giới tính</th>
+                                        <th>Gói tập</th>
+                                        <th>Ngày bắt đầu</th>
+                                        <th>Ngày kết thúc</th>
+                                        <th>Tổng thanh toán</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="members-table"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="huan-luyen-vien" class="tab-content" style="display:none;">
+                        <div class="d-flex justify-content-end mb-4">
+                            <button class="primary-btn" onclick="editTrainer(-1)">
+                                <i class="fa fa-plus"></i> Thêm huấn luyện viên
+                            </button>
+                        </div>
+                        <div class="chart-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Mã HLV</th>
+                                        <th>Họ tên</th>
+                                        <th>SĐT</th>
+                                        <th>Email</th>
+                                        <th>Kinh nghiệm</th>
+                                        <th>Thành tích</th>
+                                        <th>Gói dạy</th>
+                                        <th>Thứ trong tuần</th>
+                                        <th>Ca</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="trainers-table"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="lich" class="tab-content" style="display:none;">
+                        <div class="d-flex justify-content-end mb-4">
+                            <button class="primary-btn" onclick="editSchedule(-1)">
+                                <i class="fa fa-plus"></i> Thêm lịch
+                            </button>
+                        </div>
+                        <div class="chart-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Mã lịch</th>
+                                        <th>Loại lịch</th>
+                                        <th>Gói tập</th>
+                                        <th>Thứ</th>
+                                        <th>Ca</th>
+                                        <th>Mã HLV</th>
+                                        <th>Mã TV</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="schedules-table"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="goi-tap" class="tab-content" style="display:none;">
+                        <div class="d-flex justify-content-end mb-4">
+                            <button class="primary-btn" onclick="editPackage(-1)">
+                                <i class="fa fa-plus"></i> Thêm gói tập
+                            </button>
+                        </div>
+                        <div class="chart-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Mã gói</th>
+                                        <th>Tên gói</th>
+                                        <th>Lợi ích</th>
+                                        <th>Quyền lợi</th>
+                                        <th>Huấn luyện viên phụ trách</th>
+                                        <th>Giá gói</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="packages-table"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="danh-gia" class="tab-content" style="display:none;">
+                        <div class="chart-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Mã TV</th>
+                                        <th>Họ tên</th>
+                                        <th>Nội dung đánh giá</th>
+                                        <th>Số sao</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="reviews-table"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="lien-he" class="tab-content" style="display:none;">
+                        <div class="chart-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Họ tên</th><th>SDT</th>
+                                        <th>Địa chỉ</th>
+                                        <th>Nội dung đánh giá</th>     
+                                    </tr>
+
+                                </thead>
+                                <tbody id="contacts-table"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="memberModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Quản lý thành viên</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="memberForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Họ tên <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="mem_hoten" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>SDT <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="mem_sdt" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="mem_email" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Giới tính</label>
+                                    <select class="form-control" id="mem_gioitinh">
+                                        <option>Nam</option>
+                                        <option>Nữ</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Gói tập</label>
+                                    <select class="form-control" id="mem_goitap">
+                                        <option>Yoga(1 tháng)</option>
+                                        <option>Boxing(1 tháng)</option>
+                                        <option>Gym(1 tháng)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Tổng thanh toán (VND)</label>
+                                    <input type="number" class="form-control" id="mem_thanhtoan" min="0"
+                                        placeholder="0">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-primary" onclick="saveMember()">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="trainerModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Quản lý HLV</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="trainerForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Họ tên <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="trn_hoten" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>SĐT <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="trn_sdt" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="trn_email" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Kinh nghiệm</label>
+                                    <textarea class="form-control" id="trn_kinhnghiem" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Thành tích</label>
+                                    <textarea class="form-control" id="trn_thanhtich" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Gói dạy</label>
+                                    <select class="form-control" id="trn_goitap">
+                                        <option>Yoga</option>
+                                        <option>Boxing</option>
+                                        <option>Gym</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Thứ trong tuần</label>
+                                    <select class="form-control" id="trn_thu">
+                                        <option>Thứ hai</option>
+                                        <option>Thứ ba</option>
+                                        <option>Thứ tư</option>
+                                        <option>Thứ năm</option>
+                                        <option>Thứ sáu</option>
+                                        <option>Thứ bảy</option>
+                                        <option>Chủ nhật</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Ca</label>
+                                    <select class="form-control" id="trn_ca">
+                                        <option>Sáng</option>
+                                        <option>Chiều</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-primary" onclick="saveTrainer()">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="scheduleModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Quản lý lịch</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="scheduleForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Mã lịch</label>
+                                    <input type="text" class="form-control" id="sch_id" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Loại lịch</label>
+                                    <select class="form-control" id="sch_type" onchange="updateScheduleType()">
+                                        <option>Lịch tập</option>
+                                        <option>Lịch dạy</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Gói tập</label>
+                                    <select class="form-control" id="sch_goitap">
+                                        <option>Yoga</option>
+                                        <option>Boxing</option>
+                                        <option>Gym</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Thứ</label>
+                                    <select class="form-control" id="sch_thu">
+                                        <option>Thứ hai</option>
+                                        <option>Thứ ba</option>
+                                        <option>Thứ tư</option>
+                                        <option>Thứ năm</option>
+                                        <option>Thứ sáu</option>
+                                        <option>Thứ bảy</option>
+                                        <option>Chủ nhật</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Ca</label>
+                                    <select class="form-control" id="sch_ca">
+                                        <option>Ca sáng</option>
+                                        <option>Ca chiều</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Mã HLV</label>
+                                    <input type="text" class="form-control" id="sch_trainerId" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Mã TV</label>
+                                    <input type="text" class="form-control" id="sch_memberId">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-primary" onclick="saveSchedule()">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="packageModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Quản lý gói tập</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="packageForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Mã gói</label>
+                                    <input type="text" class="form-control" id="pkg_id" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Tên gói</label>
+                                    <select class="form-control" id="pkg_name">
+                                        <option>Gym</option>
+                                        <option>Yoga</option>
+                                        <option>Boxing</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Lợi ích</label>
+                                    <textarea class="form-control" id="pkg_loiich" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Quyền lợi</label>
+                                    <textarea class="form-control" id="pkg_quyenloi" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Huấn luyện viên phụ trách</label>
+                                    <input type="text" class="form-control" id="pkg_hlv">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Giá (VND) <span class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="pkg_price" required min="0">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-primary" onclick="savePackage()">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="gettouch-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-map-marker"></i>
+                        <p>306 Hồ Tùng Mậu, Phú Diễn, Bắc Từ Liêm<br /> TP.Hà Nội</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-mobile"></i>
+                        <ul>
+                            <li>0968 868 888</li>
+                            <li>0846 686 888</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text email">
+                        <i class="fa fa-envelope"></i>
+                        <p>Support.GymLy@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="fs-about">
+                        <div class="fa-logo">
+                            <a href="#"><img src="../img/logo.png" alt=""></a>
+                        </div>
+                        <p>Trải nghiệm chương trình tập luyện khoa học, giúp cải thiện sức khỏe, vóc dáng và tăng năng
+                            lượng mỗi ngày.</p>
+                        <div class="fa-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa  fa-envelope-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Liên kết hữu ích</h4>
+                        <ul>
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Trang chủ</a></li>
+                            <li><a href="#">Lịch</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Hỗ trợ</h4>
+                        <ul>
+                            <li><a href="#">Đăng nhập</a></li>
+                            <li><a href="#">Gói tập</a></li>
+                            <li><a href="#">Đội ngũ HLV</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="fs-widget">
+                        <h4>Lời khuyên & Hướng dẫn</h4>
+                        <div class="fw-recent">
+                            <h6><a href="#">Tập luyện thể chất giúp phòng ngừa trầm cảm và lo âu</a></h6>
+                            <ul>
+                                <li>3 min read</li>
+                                <li>20 Comment</li>
+                            </ul>
+                        </div>
+                        <div class="fw-recent">
+                            <h6><a href="#">Thể hình: Bài tập hiệu quả nhất để giảm mỡ bụng và săn cơ</a></h6>
+                            <ul>
+                                <li>5 min read</li>
+                                <li>25 Comment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p>&copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | Welcome to
+                            <i class="fa fa-heart" aria-hidden="true"></i> <a href="https://colorlib.com"
+                                target="_blank">GymLy</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/masonry.pkgd.min.js"></script>
+    <script src="../js/jquery.barfiller.js"></script>
+    <script src="../js/jquery.slicknav.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script src="admin-sync.js"></script>
+    <script src="data.js"></script>
+    <script src="admin-crud.js"></script>
+    <script src="contact-render.js"></script><script src="admin-render.js"></script>
+
+</body>
+<style>
+ 
+/* 1. Đặt màu ĐEN cho TIÊU ĐỀ (HEADER) */
+/* Cần dùng !important để ghi đè màu trắng đã đặt trước đó */
+#lien-he thead th {
+    /* Màu nền #f9f9f9 và font-weight đã có trong CSS chung */
+    color: #333 !important; /* Đặt lại màu chữ tiêu đề là ĐEN */
+}
+
+/* 2. Đặt màu TRẮNG cho NỘI DUNG BẢNG (CELLS) */
+/* Áp dụng cho tất cả các ô dữ liệu (td) trong bảng liên hệ */
+#contacts-table td {
+    color: white !important; /* Màu chữ trắng cho dữ liệu */
+}
+
+/* 3. Đảm bảo Họ tên (Cột thứ 2) vẫn có màu TRẮNG (không cần thay đổi nếu không muốn nổi bật) */
+/* Nếu bạn vẫn muốn cột Họ tên NỔI BẬT màu ĐEN, dùng quy tắc này */
+/*
+#contacts-table tr td:nth-child(2) {
+    color: #333 !important; 
+    font-weight: 600; 
+}
+*/
+ 
+
+</style>
+
+</html>

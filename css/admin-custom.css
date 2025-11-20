@@ -1,0 +1,129 @@
+/* admin-custom.css - Bổ sung cho style.css */
+
+.admin-sidebar {
+  background: #252525;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.admin-sidebar ul {
+  padding: 0;
+  margin: 0;
+}
+
+.admin-sidebar li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.admin-sidebar a {
+  display: block;
+  padding: 12px 20px;
+  color: #c4c4c4;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.admin-sidebar a:hover, .admin-sidebar a.active {
+  background: #f36100;
+  color: #fff;
+}
+
+.admin-content {
+  padding: 30px;
+}
+
+.tab-content .section-title {
+  margin-bottom: 30px;
+}
+
+.tab-content .chart-table {
+  background: #252525;
+}
+
+.tab-content .chart-table th {
+  background: #f36100;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 15px;
+  border-bottom: none;
+}
+
+.tab-content .chart-table td {
+  padding: 15px;
+  border-bottom: 1px solid #363636;
+  color: #c4c4c4;
+  font-family: "Muli", sans-serif;
+  font-size: 14px;
+}
+
+.tab-content .chart-table tr:hover {
+  background: #363636;
+}
+
+
+
+/* NÚT SỬA & XÓA: */
+.btn-action {
+    display: inline-block; 
+    margin: 0 4px; 
+    min-width: 60px; 
+    text-align: center; 
+}
+
+.chart-table td:last-child {
+    text-align: center; /* Căn giữa toàn bộ cột Hành động */
+}
+
+.edit-btn {
+    background-color: #f36100;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #e04e00;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.delete-btn {
+    background-color: #6c757d;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #5a6268;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* NÚT THÊM: giống sidebar, uppercase, font Oswald */
+.sidebar-btn {
+    background-color: #f36100;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px; /* Bo góc giống sidebar */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(243, 97, 0, 0.3);
+}
+
+.sidebar-btn:hover {
+    background-color: #e04e00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(243, 97, 0, 0.4);
+    color: white;
+}
